@@ -11,11 +11,11 @@ before_script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - docker build -t jcmeunier77/prediction_API:latest .
+  - docker build -t jcmeunier77/prediction_api:latest .
 
 deploy:
   provider: script
   script:
-    docker push jcmeunier77/prediction_API:latest;
+    docker push jcmeunier77/prediction_api:latest;
   on:
-    branch: main
+    branch: master
