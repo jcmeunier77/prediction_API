@@ -1,0 +1,21 @@
+langage: python
+python:
+  - 3.8
+services:
+  - docker
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+script:
+  - docker build -t jcmeunier77/prediction_API:latest .
+
+deploy:
+  provider: script
+  script:
+    docker push jcmeunier77/prediction_API:latest;
+  on:
+    branch: main

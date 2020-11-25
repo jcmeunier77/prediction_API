@@ -1,0 +1,16 @@
+flask
+os
+geopy
+pyproj
+shapefile
+shapely
+numpy
+open3d
+rasterio
+subprocess
+scipy
+matplotlib
+folium
+pickle
+json
+
