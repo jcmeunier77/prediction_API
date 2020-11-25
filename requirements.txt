@@ -4,7 +4,7 @@ pyproj
 pyshp
 shapely
 numpy
-open3d==0.10.0.1
+open3d==0.10.0.0
 rasterio
 scipy
 matplotlib
