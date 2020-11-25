@@ -1,7 +1,7 @@
 flask
 geopy
 pyproj
-shapefile
+pyshp
 shapely
 numpy
 open3d==0.10.0.1
