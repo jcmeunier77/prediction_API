@@ -10,3 +10,4 @@ scipy
 matplotlib
 folium
 scikit-learn==0.23.2
+pandas
