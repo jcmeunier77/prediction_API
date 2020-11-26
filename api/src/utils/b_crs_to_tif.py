@@ -25,7 +25,10 @@ class PathToTif:
             shp_polygon = self.bbox_to_polygon(self.shp.bbox)
             target_point = self.target_to_point()
             if shp_polygon.contains(target_point):
-                self.dsm_path = f'api/src/data/DSM_vlaanderen/DHMVIIDSMRAS1m_k{i:02}/GeoTIFF/DHMVIIDSMRAS1m_k{i:02}.tif'
+                # code for the normal tif file
+                #                self.dsm_path = f'api/src/data/DSM_vlaanderen/DHMVIIDSMRAS1m_k{i:02}/GeoTIFF/DHMVIIDSMRAS1m_k{i:02}.tif'
+                # code for the reduced tif file
+                self.dsm_path = f'api/src/data/DSM_vlaanderen/DHMVIIDSMRAS1m_k{i:02}/GeoTIFF/arendonk_k{i:02}.tif'
             else:
                 pass
         return self.dsm_path
