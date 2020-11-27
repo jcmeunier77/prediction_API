@@ -78,7 +78,7 @@ class TiffTo3D :
         with o3d.utility.VerbosityContextManager(o3d.utility.VerbosityLevel.Debug) as cm:
             poisson_mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(pcd, depth=9, linear_fit =True)
         densities = np.asarray(densities)
-        density_colors = plt.get_cmap('Spectral')((densities - densities.min()) / (densities.max() - densities.min()))
+        density_colors = plt.get_cmap('gist_gray')((densities - densities.min()) / (densities.max() - densities.min()))
         density_colors = density_colors[:, :3]
         density_mesh = o3d.geometry.TriangleMesh()
         density_mesh.vertices = poisson_mesh.vertices
@@ -89,6 +89,26 @@ class TiffTo3D :
         density_mesh.remove_vertices_by_mask(vertices_to_remove)
         return o3d.visualization.draw_geometries([density_mesh])
 
+    def crop_to_3Dobj (self):
+        self.tif_to_xyz(crop_directory)
+        dataname=f"{crop_name}.xyz"
+        point_cloud= np.loadtxt(crop_directory+dataname,skiprows=1)
+        pcd = o3d.geometry.PointCloud()
+        pcd.points = o3d.utility.Vector3dVector(point_cloud[:,:3])
+        pcd.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1, max_nn=30))
+        with o3d.utility.VerbosityContextManager(o3d.utility.VerbosityLevel.Debug) as cm:
+            poisson_mesh, densities = o3d.geometry.TriangleMesh.create_from_point_cloud_poisson(pcd, depth=9, linear_fit =True)
+        densities = np.asarray(densities)
+        density_colors = plt.get_cmap('Greys')((densities - densities.min()) / (densities.max() - densities.min()))
+        density_colors = density_colors[:, :3]
+        density_mesh = o3d.geometry.TriangleMesh()
+        density_mesh.vertices = poisson_mesh.vertices
+        density_mesh.triangles = poisson_mesh.triangles
+        density_mesh.triangle_normals = poisson_mesh.triangle_normals
+        density_mesh.vertex_colors = o3d.utility.Vector3dVector(density_colors)
+        vertices_to_remove = densities < np.quantile(densities, 0.01)
+        density_mesh.remove_vertices_by_mask(vertices_to_remove)
+        return o3d.io.write_triangle_mesh("./static/threejs/house_sample.obj", density_mesh)
 
 # TiffTo3D(target[0], target[1], path_to_tif).tif_crop()
 #
