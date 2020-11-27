@@ -8,7 +8,7 @@ from shapely.geometry import Point
 import scipy.interpolate as sci
 import matplotlib.pyplot as plt
 
-# target = 199414.11489207728, 223588.5598308323
+# target = 199414.11489207728, 223588.55983083232
 # path_to_tif = "../data/DSM_vlaanderen/DHMVIIDSMRAS1m_k09/GeoTIFF/DHMVIIDSMRAS1m_k09.tif"
 crop_directory = "api/src/data/output/"
 crop_name = "result"
