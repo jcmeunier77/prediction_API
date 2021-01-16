@@ -42,9 +42,9 @@ Better visualization
 
 #### 2. Data collection 
 - [x] for 3D house reconstruction 
-      - [DTM file for Flandre including Brussels](http://bit.ly/DTM_Flandre)
-      - [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
-      - [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
+  - [DTM file for Flandre including Brussels](http://bit.ly/DTM_Flandre)
+  - [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
+  - [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
 - [x] for real-estate data 
       - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (20.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
       
