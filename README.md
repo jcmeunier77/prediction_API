@@ -4,9 +4,9 @@
 
 ### Purpose 
 - [x] To develop API that capitalizes on real-estate data to render the following functionalities : 
-      1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project](https://github.com/jcmeunier77/House_3D_API)
-      2. locating the house on a map by entering its address 
-      3. making price forecast on the buildings (i.e. houses or apartment) according to multiple features (postal code, number of rooms, living space, surface area, etc.)
+      - 1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project](https://github.com/jcmeunier77/House_3D_API)
+      - 2. locating the house on a map by entering its address 
+      - 3. making price forecast on the buildings (i.e. houses or apartment) according to multiple features (postal code, number of rooms, living space, surface area, etc.)
       
 - [x] Te deploy the API on azure (using a.o. Docker and Travis) 
 
@@ -43,11 +43,11 @@ Better visualization
 
 #### 2. Data collection 
 - [x] for 3D house reconstruction 
-      [DTM file for Flandre including Brussels](http://bit.ly/DTM_Flandre)
-      [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
-      [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
+      - [DTM file for Flandre including Brussels](http://bit.ly/DTM_Flandre)
+      - [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
+      - [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
 - [x] for real-estate data 
-      Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (20.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
+      - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (20.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
       
 #### 3. Data manipulation 
 - [x] Data cleaning : including, a.o., removing outliers and features with to many missing values (>15%) and conducting multivariate feature imputation for the feature with less missing values (using sklearn.impute.IterativeImputer)
