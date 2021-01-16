@@ -1,4 +1,4 @@
-# prediction_API
+# Prediction_API
  
 ## 1. Purpose and project objective 
 
