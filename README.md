@@ -3,9 +3,10 @@
 ## 1. Purpose and project objective 
 
 ### Purpose 
-- [x] To develop API that capitalizes on real-estate data to render the following functionalities : 
-      - 1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project](https://github.com/jcmeunier77/House_3D_API)
-      - 2. locating the house on a map by entering its address 
+- [x] To develop API that capitalizes on real-estate data to render the following functionalities :
+     - 1. 
+    - 1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project](https://github.com/jcmeunier77/House_3D_API)
+- 2. locating the house on a map by entering its address 
       - 3. making price forecast on the buildings (i.e. houses or apartment) according to multiple features (postal code, number of rooms, living space, surface area, etc.)
       
 - [x] Te deploy the API on azure (using a.o. Docker and Travis) 
