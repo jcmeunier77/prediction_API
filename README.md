@@ -46,11 +46,32 @@ Better visualization
   - [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
   - [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
 - [x] for real-estate data 
-      - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (20.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
+      - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (50.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
       
 #### 3. Data manipulation 
 - [x] Data cleaning : including, a.o., removing outliers and features with to many missing values (>15%) and conducting multivariate feature imputation for the feature with less missing values (using sklearn.impute.IterativeImputer)
 
 - [x] Features engineering : as location (postal code) are not readily amenable to be integrate in quantitative model - but has nonetheless a huge impact on real-estate price - a ranking index was compute based on the average house price for each entities in Belgium. As shown, this index demonstrates a good association with house prices and it seemed that its 3rd polynomials best explained the target (more than 25% of the 'house price' variance explained for this sole feature - based on r_square coefficient).    
+
+#### 4. Modelization
+- [x] Features : 
+  - type of building: house/apartment
+  - living area: square meters
+  - field's surface: square meters
+  - number of facades
+  - number of bedrooms
+  - garden: yes/no
+  - terrace: yes/no
+  - terrace area: square meters
+  - equipped kitchen: yes/no
+  - fireplace: yes/no
+  - swimming pool: yes/no
+  - state of the building: as new, just renovated, good, to refresh, to renovate, to restore (one hot encoding)
+- [x] Target: 
+  - House price: euros 
+- [x] Machine learning model: 
+  - Multiple models using increasing number of features and based on various algorithm (i.a. linear, SVM, decision tree, XGBoost)where trained and evaluated.
+  - The best model was based on the XGBoost algorithm (n_estimators=700, max_depth= 4, learning_rate= 0.3) and provided an r_square coefficient of .82 on the train set and of .76 on the test set
+  - The best fitted model was save as a pickel file which was integrated in the API for price estimation 
 
 
