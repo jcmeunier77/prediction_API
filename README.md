@@ -4,7 +4,7 @@
 
 ### Purpose 
 - [x] To develop API that capitalizes on real-estate data to render the following functionalities : 
-      1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project] https://github.com/jcmeunier77/House_3D_API
+      1. modeling a house in 3D from lidar satellite images (geoTIFFs file) by only entering a home address. This part is an extension of a [previous project](https://github.com/jcmeunier77/House_3D_API)
       2. locating the house on a map by entering its address 
       3. making price forecast on the buildings (i.e. houses or apartment) according to multiple features (postal code, number of rooms, living space, surface area, etc.)
       
@@ -52,4 +52,6 @@ Better visualization
 #### 3. Data manipulation 
 - [x] Data cleaning : including, a.o., removing outliers and features with to many missing values (>15%) and conducting multivariate feature imputation for the feature with less missing values (using sklearn.impute.IterativeImputer)
 
-- [x] Features engineering : as location (postal code) are not readily amenable to be integrate in quantitative model - but has nonetheless a huge impact on real-estate price   
+- [x] Features engineering : as location (postal code) are not readily amenable to be integrate in quantitative model - but has nonetheless a huge impact on real-estate price - a ranking index was compute based on the average house price for each entities in Belgium. As shown, this index demonstrates a good association with house prices and it seemed that its 3rd polynomials best explained the target (more than 25% of the 'house price' variance explained for this sole feature - based on r_square coefficient).    
+
+
