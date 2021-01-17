@@ -53,6 +53,10 @@ Better visualization
 
 - [x] Features engineering : as location (postal code) are not readily amenable to be integrate in quantitative model - but has nonetheless a huge impact on real-estate price - a ranking index was compute based on the average house price for each entities in Belgium. As shown, this index demonstrates a good association with house prices and it seemed that its 3rd polynomials best explained the target (more than 25% of the 'house price' variance explained for this sole feature - based on r_square coefficient).    
 
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/pc%20ranked%20by%20prices.png">
+</p>
+
 #### 4. Modelization
 - [x] Features : 
   - type of building: house/apartment
@@ -74,4 +78,46 @@ Better visualization
   - The best model was based on the XGBoost algorithm (n_estimators=700, max_depth= 4, learning_rate= 0.3) and provided an r_square coefficient of .82 on the train set and of .76 on the test set
   - The best fitted model was save as a pickel file which was integrated in the API for price estimation 
 
+### Project output
+#### 1. API Structure 
 
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%20structure.png">
+</p>
+
+### 2. API Routes
+- [x] Estimate: in
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%20estimate%20in.png">
+</p>
+
+- [x] Estimate: out
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%20estimate%20out.png">
+</p>
+
+- [x] Map: in
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%20map%20in.png">
+</p>
+
+- [x] Map: out
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%20map%20out.png">
+</p>
+
+- [x] 3D reconstruction: in
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/API%203D%20in.png">
+</p>
+
+- [x] 3D reconstruction: out
+
+<p align="center">
+    <img src="https://github.com/jcmeunier77/prediction_API/blob/master/img_out/3d%20output.png">
+</p>
