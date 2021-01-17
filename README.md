@@ -45,8 +45,8 @@ Better visualization
   - [DTM file for Flandre including Brussels](http://bit.ly/DTM_Flandre)
   - [DSM file for Flandre including Brussels](http://bit.ly/DSM_Flandre)
   - [Shapefiles with cadastral maps and parcels](https://eservices.minfin.fgov.be/myminfin-web/pages/cadastral-plans?_ga=2.167466685.225309318.1604313780-388788923.1602907232)
-- [x] for real-estate data 
-      - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (50.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
+- [x] for real-estate data
+  - Data collection was done in the context of a previous project whose aim was to develop a [Scrapping Bot](https://github.com/jcmeunier77/bot-scrape-zimmo) written in Python, to scrape data (50.000+) from real estate website "Zimmo.be", for a challenge given by Becode.
       
 #### 3. Data manipulation 
 - [x] Data cleaning : including, a.o., removing outliers and features with to many missing values (>15%) and conducting multivariate feature imputation for the feature with less missing values (using sklearn.impute.IterativeImputer)
@@ -74,9 +74,10 @@ Better visualization
 - [x] Target: 
   - House price: euros 
 - [x] Machine learning model: 
-  - Multiple models using increasing number of features and based on various algorithm (i.a. linear, SVM, decision tree, XGBoost)where trained and evaluated.
+  - Multiple models using increasing number of features and based on various algorithm (i.a. linear, SVM, decision tree, XGBoost) were trained and evaluated.
   - The best model was based on the XGBoost algorithm (n_estimators=700, max_depth= 4, learning_rate= 0.3) and provided an r_square coefficient of .82 on the train set and of .76 on the test set
   - The best fitted model was save as a pickel file which was integrated in the API for price estimation 
+  - Examples of python code for data manipulation and algorithms development are stored in the [notebook folder](https://github.com/jcmeunier77/prediction_API/tree/master/notebooks%20data%20preparation%20and%20ML%20algorithms) of the current repository
 
 ### Project output
 #### 1. API Structure 
